@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Socket } from 'ngx-socket-io';
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs';
 
@@ -8,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SocketService {
   private url = 'http://192.168.2.4:4000';
-  private socket;
+  private socket: any;
 
   constructor() {
     this.socket = io(this.url);
